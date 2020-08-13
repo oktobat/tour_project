@@ -1,10 +1,10 @@
 (function($){
 
     function openNav(){
-        // $('#header').toggleClass('on')
+        $('#header').toggleClass('on')
         if ( $('#header').hasClass('on') ) {
             $('.nav').css({
-                opacity:'1'
+                display:'block'
             }).animate({
                 right:'0px'
             }, 500)
@@ -13,7 +13,7 @@
                 right:'-320px'
             }, 500, function(){
                 $(this).css({
-                    opacity:'0'
+                    display:'none'
                 })
             })
         }

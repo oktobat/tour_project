@@ -38,14 +38,15 @@
         
         
 
-    #header .nav { opacity:0; 
+    #header .nav { display:none; 
         background:rgba(0,0,0,1);
         position:fixed; min-width:320px; height:100%;
         top:90px; right:-320px; text-align:center;
         transform:translateY(0%);
-        padding-top:40px; transition:right 0.5s;
+        padding-top:40px; 
+        /* transition:right 0.5s; */
     }
-    #header.on .nav { opacity:1;  right:0px  }    
+    #header.on .nav { display:block;   }    
     #header .nav .depth1 > li { display:block; }
     #header .nav .depth1 > li > a { 
         font-size:18px; color:#fff;  
