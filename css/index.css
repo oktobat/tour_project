@@ -45,6 +45,31 @@ body, html, #wrap { height:100% }
 .section-outer .section:nth-child(1) .slide3 {
     background-image:url(../img/mainslide03.jpg)
 }
+/* 화살표 버튼 */
+.slide-outer { position:relative }
+.slide-outer .marrow { 
+    font-size:80px; color:#fff; 
+    position:absolute; top:50%;
+    transform:translateY(-50%); 
+    background:none; }
+.slide-outer .prevArrow { left:10%; z-index:99999 }    
+.slide-outer .nextArrow { right:10% }
+
+/* 동그라미 버튼 */
+.slide-outer .slick-dots { 
+    position:absolute; bottom:20px; width:100%;
+    text-align:center }
+.slide-outer .slick-dots li {
+    display:inline-block; }    
+.slide-outer .slick-dots li button {
+    width:15px; height:15px; border-radius:50%;
+    background:#fff; text-indent:-99999px;
+    overflow:hidden; margin:0 5px; 
+}
+.slide-outer .slick-dots li.slick-active button { 
+    background:#f00; width:40px; 
+    border-radius:50px
+}
 
 
 .section-outer .section:nth-child(2) {

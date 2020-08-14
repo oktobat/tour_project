@@ -1,5 +1,6 @@
 (function($){
 
+
     function openNav(){
         $('#header').toggleClass('on')
         if ( $('#header').hasClass('on') ) {
@@ -17,28 +18,36 @@
                 })
             })
         }
-        // $('.outlayer').toggleClass('on')
+        $('.outlayer').toggleClass('on')
     }
     $('.open-gnb').on('click', openNav)
     $('.outlayer').on('click', openNav)
 
-    
-    $(window).resize(function(){
-        var winWidth = $(this).innerWidth()
-        if ( winWidth > 800 && flag) {
+    function init(){
+        var winWidth = $(window).innerWidth()
+        if ( winWidth > 800 && !$('html').hasClass('pc')) {
             $('#header').removeClass('on')
+            $('.outlayer').removeClass('on')
             $('.nav').css({
                 display:'block',
-                right:'0px',
+                right:'0px'
             })
-        } else if (winWidth<=800 && !flag ) {
+            $('html').addClass('pc').removeClass('mobile')
+        } else if ( winWidth<800 && !$('html').hasClass('mobile') ) {
             $('#header').removeClass('on')
             $('.nav').css({
                 display:'none',
                 right:'-320px'
             })
+            $('html').addClass('mobile').removeClass('pc')
         }
+    }        
+    init()
+
+    $(window).resize(function(){
+        init()
     })
+    
 
 
 
@@ -47,6 +56,18 @@
         autoplay:true,
         dots:true,
         autoplaySpeed:1000,
+        speed:600,
+        slidesToShow:1,
+        slidesToScroll:1,
+        pauseOnHover:true,
+        pauseOnDotsHover:true,
+        pauseOnFocus:false,
+        cssEase:'ease',
+        draggable:true,
+        fade:false, 
+        arrows:true,
+        prevArrow:'<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
+        nextArrow:'<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>'
     })
 
 
