@@ -25,7 +25,7 @@
 
     function init(){
         var winWidth = $(window).innerWidth()
-        if ( winWidth > 800 && !$('html').hasClass('pc')) {
+        if ( winWidth>800 && !$('html').hasClass('pc') ) {
             $('#header').removeClass('on')
             $('.outlayer').removeClass('on')
             $('.nav').css({
@@ -33,7 +33,7 @@
                 right:'0px'
             })
             $('html').addClass('pc').removeClass('mobile')
-        } else if ( winWidth<800 && !$('html').hasClass('mobile') ) {
+        } else if (winWidth<800 && !$('html').hasClass('mobile')) {
             $('#header').removeClass('on')
             $('.nav').css({
                 display:'none',
@@ -50,17 +50,16 @@
     
 
 
-
     // 메인슬라이드 : 슬릭슬라이더 연결
     $('.slide-inner').slick({
         autoplay:true,
         dots:true,
-        autoplaySpeed:1000,
+        autoplaySpeed:4500,
         speed:600,
         slidesToShow:1,
         slidesToScroll:1,
         pauseOnHover:true,
-        pauseOnDotsHover:true,
+        pauseOnDotsHover:false,
         pauseOnFocus:false,
         cssEase:'ease',
         draggable:true,

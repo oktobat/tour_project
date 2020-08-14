@@ -35,6 +35,7 @@ body, html, #wrap { height:100% }
 .section-outer .section:nth-child(1) .slide { height:100%;
     background-size:cover; background-repeat:no-repeat;
     background-position:center;
+    position:relative; 
 }
 .section-outer .section:nth-child(1) .slide1 {
     background-image:url(../img/mainslide01.jpg)
@@ -79,6 +80,40 @@ body, html, #wrap { height:100% }
     left:50%; margin-left:55px;
 }
 
+/* 슬라이드 위에 텍스트박스 애니메이션 */
+.slide-outer .slide .text {
+    position:absolute; width:100%;
+    text-align:center; 
+    top:50%; transform:translateY(-50%);
+    color:#fff; 
+}
+.slide-outer .slide .text p:nth-child(1) {
+    font-size:45px; 
+    text-shadow:2px 2px 5px #555; 
+    border-bottom:1px solid #999; 
+    padding-bottom:10px; 
+    width:600px; margin:0 auto; 
+}
+.slide-outer .slide .text p:nth-child(2) {
+    font-size:20px; 
+    margin-top:20px; 
+    letter-spacing:6px;
+}
+.slide-outer .slide .text p:nth-child(3) {
+    font-size:20px; 
+    letter-spacing:3px;
+    position:relative; top:150px; 
+}
+/* 애니메이션 연결 */
+.slide-outer .slide.slick-active .text p:nth-child(1) { 
+    animation:bounceInDown 1s both 0.5s
+}
+.slide-outer .slide.slick-active .text p:nth-child(2) { 
+    animation:bounceInUp 1s both 1s
+}
+.slide-outer .slide.slick-active .text p:nth-child(3) { 
+    animation:fadeInRight 1s both 1.5s
+}
 
 
 .section-outer .section:nth-child(2) {
