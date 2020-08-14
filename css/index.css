@@ -31,18 +31,18 @@ body, html, #wrap { height:100% }
 .section-outer { height:100% }
 .section-outer .section { height:100% }
 .section-outer .section:nth-child(1) .slide-outer { height:100% }
-.section-outer .section:nth-child(1) .slide-inner { height:100%; overflow:hidden }
+.section-outer .section:nth-child(1) .slide-inner { height:100%;  }
 .section-outer .section:nth-child(1) .slide { height:100%;
     background-size:cover; background-repeat:no-repeat;
     background-position:center;
 }
-.section-outer .section:nth-child(1) .slide:nth-child(1) {
+.section-outer .section:nth-child(1) .slide1 {
     background-image:url(../img/mainslide01.jpg)
 }
-.section-outer .section:nth-child(1) .slide:nth-child(2) {
+.section-outer .section:nth-child(1) .slide2 {
     background-image:url(../img/mainslide02.jpg)
 }
-.section-outer .section:nth-child(1) .slide:nth-child(3) {
+.section-outer .section:nth-child(1) .slide3 {
     background-image:url(../img/mainslide03.jpg)
 }
 

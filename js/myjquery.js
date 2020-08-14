@@ -22,15 +22,32 @@
     $('.open-gnb').on('click', openNav)
     $('.outlayer').on('click', openNav)
 
+    
     $(window).resize(function(){
         var winWidth = $(this).innerWidth()
-        if ( winWidth > 800 ) {
+        if ( winWidth > 800 && flag) {
             $('#header').removeClass('on')
-            $('.outlayer').removeClass('on')
+            $('.nav').css({
+                display:'block',
+                right:'0px',
+            })
+        } else if (winWidth<=800 && !flag ) {
+            $('#header').removeClass('on')
+            $('.nav').css({
+                display:'none',
+                right:'-320px'
+            })
         }
     })
 
 
+
+    // 메인슬라이드 : 슬릭슬라이더 연결
+    $('.slide-inner').slick({
+        autoplay:true,
+        dots:true,
+        autoplaySpeed:1000,
+    })
 
 
 

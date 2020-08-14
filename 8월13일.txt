@@ -1,0 +1,14 @@
+     $(window).resize(function(){
+        var winWidth = this.innerWidth
+        if ( winWidth > 800 ) {
+            $('#header').removeClass('on')
+            $('.outlayer').removeClass('on')
+        }
+    })
+
+    function openNav() {
+        $('#header').toggleClass('on')
+        $('.outlayer').toggleClass('on')
+    }
+    $('.open-gnb').on('click', openNav)
+    $('.outlayer').on('click', openNav)
