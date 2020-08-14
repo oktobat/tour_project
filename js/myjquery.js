@@ -70,6 +70,35 @@
         nextArrow:'<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>'
     })
 
+    // $(".plpa").on("click", function(){
+    //     if ($(this).find('i').hasClass('fa-pause') ){
+    //         $(this).find('i').removeClass('fa-pause')
+    //         .addClass('fa-play')
+    //         $(".slide-inner").slick("slickPause")
+    //     } else {
+    //         $(this).find('i').removeClass('fa-play')
+    //         .addClass('fa-pause')
+    //         $(".slide-inner").slick("slickPlay")
+    //     }
+    // })
+
+    
+    // toggle() 메서드를 사용하려면
+    // jquery-migrate-1.4.1.min.js 파일을 
+    // 핵심파일 아래쪽에 연결시켜야 함
+    $(".plpa").toggle(
+        function(){
+            $(this).find('i').removeClass('fa-pause')
+            .addClass('fa-play')
+            $(".slide-inner").slick("slickPause")
+        },
+        function(){
+            $(this).find('i').removeClass('fa-play')
+            .addClass('fa-pause')
+            $(".slide-inner").slick("slickPlay")
+        } 
+    )
+
 
 
 })(jQuery)

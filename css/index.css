@@ -71,6 +71,15 @@ body, html, #wrap { height:100% }
     border-radius:50px
 }
 
+/* 슬라이드 자동재생/멈춤 버튼 */
+.slide-outer .plpa {
+    font-size:15px; color:#fff; 
+    background:none; 
+    position:absolute; bottom:20px;
+    left:50%; margin-left:55px;
+}
+
+
 
 .section-outer .section:nth-child(2) {
     background:green
