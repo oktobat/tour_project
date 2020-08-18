@@ -53,7 +53,7 @@ body, html, #wrap { height:100% }
     position:absolute; top:50%;
     transform:translateY(-50%); 
     background:none; }
-.slide-outer .prevArrow { left:10%; z-index:99999 }    
+.slide-outer .prevArrow { left:10%; z-index:999 }    
 .slide-outer .nextArrow { right:10% }
 
 /* 동그라미 버튼 */
@@ -85,7 +85,10 @@ body, html, #wrap { height:100% }
     position:absolute; width:100%;
     text-align:center; 
     top:50%; transform:translateY(-50%);
-    color:#fff; 
+    color:#fff; opacity:0;
+}
+.slide-outer .slide.slick-active .text {
+     opacity:1;
 }
 .slide-outer .slide .text p:nth-child(1) {
     font-size:45px; 
