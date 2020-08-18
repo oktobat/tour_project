@@ -57,7 +57,7 @@ body, html, #wrap { height:100% }
 .slide-outer .nextArrow { right:10% }
 
 /* 동그라미 버튼 */
-.slide-outer .slick-dots { 
+/* .slide-outer .slick-dots { 
     position:absolute; bottom:20px; width:100%;
     text-align:center }
 .slide-outer .slick-dots li {
@@ -70,14 +70,38 @@ body, html, #wrap { height:100% }
 .slide-outer .slick-dots li.slick-active button { 
     background:#f00; width:40px; 
     border-radius:50px
+} */
+
+/* 막대(bar)버튼 애니메이션 */
+.slide-outer .slick-dots { 
+    position:absolute; bottom:20px; width:100%;
+    text-align:center }
+.slide-outer .slick-dots li {
+    display:inline-block; width:100px; 
+    height:3px; background:#777;
+    margin:0 5px; position:relative; 
+}    
+.slide-outer .slick-dots li button { 
+    width:0%; height:3px; 
+    background:#777; text-indent:-99999px;
+    overflow:hidden;  position:absolute;
+    top:0; left:0; 
+}
+.slide-outer .slick-dots li.slick-active button { 
+    background:#000; 
+    animation:progressbar 4.5s both;
+}
+@keyframes progressbar {
+    0% { width:0% }
+    100% { width:100% }
 }
 
 /* 슬라이드 자동재생/멈춤 버튼 */
 .slide-outer .plpa {
     font-size:15px; color:#fff; 
     background:none; 
-    position:absolute; bottom:20px;
-    left:50%; margin-left:55px;
+    position:absolute; bottom:17.5px;
+    left:50%; margin-left:180px;
 }
 
 /* 슬라이드 위에 텍스트박스 애니메이션 */
