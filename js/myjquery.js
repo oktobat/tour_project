@@ -79,7 +79,8 @@
         responsive:[{
             breakpoint:801,
             settings:{
-                arrows:false
+                arrows:false,
+                fade:true,
             }
         }]
 
