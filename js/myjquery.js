@@ -116,6 +116,24 @@
     )
 
 
+    // 포트폴리오 갤러리 클릭 이벤트시 팝업박스 작동
+    var href, src, alt;
+    $('.gallery > li > a').on('click', function(e){
+          e.preventDefault();
+          $('.galleryPopup').addClass('on')
+          href = $(this).attr('href')
+          src = $(this).find('img').attr('src')
+          alt = $(this).find('img').attr('alt')
+          // console.log(alt)
+
+    })    
+
+
+    $('.galleryPopup .close').on('click', function(){
+        $('.galleryPopup').removeClass('on')
+    })
+
+
 
 })(jQuery)
 
