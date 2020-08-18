@@ -28,6 +28,7 @@ body, html, #wrap { height:100% }
 }
 .outlayer.on { display:block }
 
+/* 슬라이드 : 첫번째 section */
 .section-outer { height:100% }
 .section-outer .section { height:100% }
 .section-outer .section:nth-child(1) .slide-outer { height:100% }
@@ -143,12 +144,27 @@ body, html, #wrap { height:100% }
 }
 
 
-.section-outer .section:nth-child(2) {
-    background:green
+/* 포트폴리오 갤러리 : 두번째 section */
+.portfolio h2 { font-size:3.75vw; text-align:center;
+    padding:25px 0px; }
+.portfolio, ul.gallery { height:100% }    
+.portfolio ul.gallery li { float:left; 
+    width:25%; height:39%; overflow:hidden;
+    padding:10px; margin-bottom:1% }
+
+/* 갤러리 팝업박스 */
+.portfolio .galleryPopup {
+    position:fixed; top:0; bottom:0; left:0; 
+    right:0; background:rgba(0,0,0,0.8);
+    z-index:99999999;
 }
+
+
+
+
 .section-outer .section:nth-child(3) {
     background:orange
 }
 .section-outer .section:nth-child(4) {
     background:violet
-}
+}    
