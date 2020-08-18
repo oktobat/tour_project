@@ -117,22 +117,60 @@
 
 
     // 포트폴리오 갤러리 클릭 이벤트시 팝업박스 작동
-    var href, src, alt;
+    var href, src, alt, lieq;
     $('.gallery > li > a').on('click', function(e){
-          e.preventDefault();
+          e.preventDefault(); // 기본이벤트를 막아줌
+          lieq = $(this).parent().index()
           $('.galleryPopup').addClass('on')
           href = $(this).attr('href')
           src = $(this).find('img').attr('src')
           alt = $(this).find('img').attr('alt')
           // console.log(alt)
-
+          $('.popupList > div > a').attr('href', href)
+          $('.popupList > div > a > img').attr({
+              'src':src,
+              'alt':alt
+          })
     })    
 
 
-    $('.galleryPopup .close').on('click', function(){
+    $('.galleryPopup .close, .galleryPopup').on('click', function(){
         $('.galleryPopup').removeClass('on')
     })
 
+    $('.popupList').on('click', function(e){
+        e.stopPropagation();  // 부모한테 이벤트전파를 막음
+    })
+
+    $('.popupList .prev').on('click', function(){
+        --lieq;
+        if (lieq<0) {
+            lieq = 7;
+        }
+        href = $('.gallery > li').eq(lieq).find('a').attr('href')
+        src = $('.gallery > li').eq(lieq).find('img').attr('src')
+        alt = $('.gallery > li').eq(lieq).find('img').attr('alt')
+        $('.popupList > div > a').attr('href', href)
+        $('.popupList > div > a > img').attr({
+            'src':src,
+            'alt':alt
+        })
+    })
+
+    $('.popupList .next').on('click', function(){
+        ++lieq;
+        if (lieq>7) {
+            lieq = 0;
+        }
+        href = $('.gallery > li').eq(lieq).find('a').attr('href')
+        src = $('.gallery > li').eq(lieq).find('img').attr('src')
+        alt = $('.gallery > li').eq(lieq).find('img').attr('alt')
+        $('.popupList > div > a').attr('href', href)
+        $('.popupList > div > a > img').attr({
+            'src':src,
+            'alt':alt
+        })
+    })
 
 
 })(jQuery)
