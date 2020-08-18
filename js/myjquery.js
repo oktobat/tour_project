@@ -142,19 +142,29 @@
         e.stopPropagation();  // 부모한테 이벤트전파를 막음
     })
 
+
+    function changeList(ind) {
+        href = $('.gallery > li').eq(ind).find('a').attr('href')
+        src = $('.gallery > li').eq(ind).find('img').attr('src')
+        alt = $('.gallery > li').eq(ind).find('img').attr('alt')
+        $('.popupList > div > a').attr('href', href)
+        $('.popupList > div > a > img').attr({
+            'src':src,
+            'alt':alt
+        }).css({
+            opacity:'0.5'
+        }).stop().animate({
+            opacity:'1'
+        }, 500)
+    }
+
+
     $('.popupList .prev').on('click', function(){
         --lieq;
         if (lieq<0) {
             lieq = 7;
         }
-        href = $('.gallery > li').eq(lieq).find('a').attr('href')
-        src = $('.gallery > li').eq(lieq).find('img').attr('src')
-        alt = $('.gallery > li').eq(lieq).find('img').attr('alt')
-        $('.popupList > div > a').attr('href', href)
-        $('.popupList > div > a > img').attr({
-            'src':src,
-            'alt':alt
-        })
+        changeList(lieq)
     })
 
     $('.popupList .next').on('click', function(){
@@ -162,14 +172,7 @@
         if (lieq>7) {
             lieq = 0;
         }
-        href = $('.gallery > li').eq(lieq).find('a').attr('href')
-        src = $('.gallery > li').eq(lieq).find('img').attr('src')
-        alt = $('.gallery > li').eq(lieq).find('img').attr('alt')
-        $('.popupList > div > a').attr('href', href)
-        $('.popupList > div > a > img').attr({
-            'src':src,
-            'alt':alt
-        })
+        changeList(lieq)
     })
 
 
