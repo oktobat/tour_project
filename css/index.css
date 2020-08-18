@@ -130,7 +130,7 @@ body, html, #wrap { height:100% }
 .slide-outer .slide .text p:nth-child(3) {
     font-size:20px; 
     letter-spacing:3px;
-    position:relative; top:150px; 
+    /* position:relative; top:150px;  */
 }
 /* 애니메이션 연결 */
 .slide-outer .slide.slick-active .text p:nth-child(1) { 

@@ -59,8 +59,34 @@
     }
     
 
+/* 막대(bar)버튼 애니메이션 */
+.slide-outer .slick-dots { 
+    position:absolute; bottom:20px; width:100%;
+    text-align:center }
+.slide-outer .slick-dots li {
+    display:inline-block; width:auto; 
+    height:auto; background:none;
+    margin:0 0px; position:static; 
+}    
+.slide-outer .slick-dots li button { 
+    width:15px; height:15px; border-radius:50%;
+    border:1px solid #fff; 
+    background:none; text-indent:-99999px;
+    overflow:hidden;  position:static;
+    top:0; left:0; margin:0 5px;
+}
+.slide-outer .slick-dots li.slick-active button { 
+    background:#fff; 
+    animation:none 4.5s both;
+}
 
-
+/* 슬라이드 자동재생/멈춤 버튼 */
+.slide-outer .plpa {
+    font-size:15px; color:#fff; 
+    background:none; 
+    position:absolute; bottom:20px;
+    left:50%; margin-left:50px;
+}
 
 
 }
