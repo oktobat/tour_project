@@ -71,7 +71,7 @@
         pauseOnDotsHover:false,
         pauseOnFocus:false,
         cssEase:'ease',
-        draggable:true,
+        draggable:true,  
         fade:false, 
         arrows:true,
         prevArrow:'<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',

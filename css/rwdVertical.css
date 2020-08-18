@@ -9,6 +9,11 @@
 
 @media only screen and (max-width:800px) {
 
+    .slide-outer .slide .text p:nth-child(1) {
+        font-size:4.375vw; 
+        max-width:600px; 
+    }
+
     #header { position:relative; height:90px; 
         transition:all 0.5s; 
         /* overflow:hidden  */
@@ -56,6 +61,22 @@
 
 
 
+
+
+}
+
+@media only screen and (max-width:600px ) {
+
+    .slide-outer .slide .text p:nth-child(1) {
+        font-size:4.375vw; 
+        max-width:320px; 
+    }
+
+    .slide-outer .slide .text p:nth-child(2) {
+        font-size:14px; 
+        margin-top:20px; 
+        letter-spacing:6px;
+    }
 
 
 }

@@ -91,11 +91,11 @@ body, html, #wrap { height:100% }
      opacity:1;
 }
 .slide-outer .slide .text p:nth-child(1) {
-    font-size:45px; 
+    font-size:3.75vw; 
     text-shadow:2px 2px 5px #555; 
     border-bottom:1px solid #999; 
     padding-bottom:10px; 
-    width:600px; margin:0 auto; 
+    max-width:600px; margin:0 auto; 
 }
 .slide-outer .slide .text p:nth-child(2) {
     font-size:20px; 
